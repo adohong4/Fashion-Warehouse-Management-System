@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A41E19E9-3AE4-4296-9829-D2F947C5C8FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanlyKhoHang1</RootNamespace>
+    <AssemblyName>QuanlyKhoHang1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.2.1\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.2.1\lib\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.6.3.0\lib\net452\Bunifu.UI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=7.0.10.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.0.10\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.0\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Web.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Web.DataVisualization.Design.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Windows.Forms.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons.cs" />
+    <Compile Include="DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKy.Designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doimatkhau.Designer.cs">
+      <DependentUpon>Doimatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChonNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonNgay.Designer.cs">
+      <DependentUpon>ChonNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyLichlam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyLichlam.Designer.cs">
+      <DependentUpon>DangKyLichlam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietHDN.Designer.cs">
+      <DependentUpon>ChitietHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChitietHDX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietHDX.Designer.cs">
+      <DependentUpon>ChitietHDX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDonXuat.Designer.cs">
+      <DependentUpon>HoaDonXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDonNhap.Designer.cs">
+      <DependentUpon>HoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu.Designer.cs">
+      <DependentUpon>NhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanCaSang.cs" />
+    <Compile Include="PlanData.cs" />
+    <Compile Include="Sanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanpham.Designer.cs">
+      <DependentUpon>Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khachhang.Designer.cs">
+      <DependentUpon>Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKiemKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKiemKho.Designer.cs">
+      <DependentUpon>FormKiemKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doimatkhau.resx">
+      <DependentUpon>Doimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChonNgay.resx">
+      <DependentUpon>ChonNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyLichlam.resx">
+      <DependentUpon>DangKyLichlam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietHDN.resx">
+      <DependentUpon>ChitietHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChitietHDX.resx">
+      <DependentUpon>ChitietHDX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDonXuat.resx">
+      <DependentUpon>HoaDonXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDonNhap.resx">
+      <DependentUpon>HoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu.resx">
+      <DependentUpon>NhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanpham.resx">
+      <DependentUpon>Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khachhang.resx">
+      <DependentUpon>Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKiemKho.resx">
+      <DependentUpon>FormKiemKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PikPng.com_twitter-icons-png_2837538.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-icon-open+password+icon-1320183290851596683_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-icon-open+password+icon-1320183290851596683_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\position.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28689e64120315.5ac7733601504.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-symbol-arrow-turn-around-and-look-around-5ad8d9cee46f47.3648666115241609749357.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7etpgol5vni7a29jfbecupgimi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7etpgol5vni7a29jfbecupgimi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-avatar-icon-human-icon-person-icon-5d678454ee52e4.1566471415670651729762.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-white-person-icon-people-white-icon-436x368.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-white-person-icon-man-icon-white-600x568.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Steven-Meisel-Vogue-1990-510x644.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-truong-dai-hoc-kien-truc-ha-noi-inkythuatso-01-23-13-08-25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adriana-Lima-by-Marcus-Cooper-LOfficiel-Italia-Sp-2022+%283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-product-return-portable-network-gra-return-icon_other-dresses_dressesss-5b64f55ec4f5c3.4335079315333430708068.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-service-computer-software-5b1ee3fb412f26.828696411528751099267.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-clipboard-cut-copy-and-paste-5ae0cc5c6668f8.4832143415246818204195.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-invoice-computer-icons-electronic-billing-receipt-invoices-vector-drawing-5ab1107237c5c1.4181590915215535222285.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
